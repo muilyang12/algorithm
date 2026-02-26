@@ -8,9 +8,11 @@ class Solution:
 
         for des, ori in prerequisites:
             graph[des].add(ori)
-        
+
         while True:
-            zero_indegree_nodes = [from_node for from_node, to_nodes in graph.items() if len(to_nodes) == 0]
+            zero_indegree_nodes = [
+                from_node for from_node, to_nodes in graph.items() if len(to_nodes) == 0
+            ]
 
             if len(zero_indegree_nodes) == 0 and len(graph) != 0:
                 return []
@@ -26,7 +28,6 @@ class Solution:
                 for to_nodes in graph.values():
                     if target in to_nodes:
                         to_nodes.remove(target)
-
 
 
 """

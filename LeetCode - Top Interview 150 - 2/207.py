@@ -9,7 +9,9 @@ class Solution:
             graph[prerequisite].add(target)
 
         while True:
-            zero_indegree_nodes = [from_node for from_node, to_nodes in graph.items() if len(to_nodes) == 0]
+            zero_indegree_nodes = [
+                from_node for from_node, to_nodes in graph.items() if len(to_nodes) == 0
+            ]
 
             if len(zero_indegree_nodes) == 0 and len(graph) == 0:
                 return True
@@ -22,6 +24,7 @@ class Solution:
                 for to_nodes in graph.values():
                     if target in to_nodes:
                         to_nodes.remove(target)
+
 
 """
 numCourses = 2, prerequisites = [[1,0],[0,1]]
