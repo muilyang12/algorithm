@@ -45,3 +45,7 @@ Edge
 ""
 "a"
 """
+
+"""
+The problem isn't that hard. You just need to know how to set a center and keep increasing the radius as long as it stays a palindrome.
+"""
