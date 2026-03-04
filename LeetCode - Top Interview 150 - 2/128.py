@@ -48,3 +48,8 @@ class Solution:
             result_length = max(result_length, current_length)
 
         return result_length
+
+
+"""
+Combining two for-loop into a single for-loop is a clever approach. The core idea here is definitely identifying the start or end point.
+"""
