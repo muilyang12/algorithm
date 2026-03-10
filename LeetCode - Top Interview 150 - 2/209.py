@@ -1,8 +1,39 @@
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        left = 0
+        right = 0
+
+        result = math.inf
+
+        current_sum = nums[right]
+
+        while right < len(nums):
+            while current_sum < target:
+                right += 1
+                if right >= len(nums):
+                    break
+                current_sum += nums[right]
+
+            while current_sum >= target:
+                result = min(result, right - left + 1)
+
+                current_sum -= nums[left]
+                left += 1
+
+        return result if result != math.inf else 0
+
 """
 Contiguous?
 Integer?
 Positive?
 Should be equal to target?
+"""
+
+"""
+7
+[2,3,1,2,4,3], 9, 3
+       !
+           @
 """
 
 """
