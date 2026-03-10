@@ -39,6 +39,7 @@ Maybe it's because I've only solved this problem once. I missed the most crucial
 The logic here is genius. Since the sum of a `subarray [i, j]` can be calculated as `prefixSum[j] - prefixSum[i-1]`, we can leverage this to solve the problem efficiently. What a great approach!
 """
 
+
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         nums_set = set(nums)
