@@ -28,6 +28,19 @@ class Solution:
         return True
 
 
+"""
+This problem can be solved with both BFS and DFS. Even within BFS, there's a faster approach compared to my initial implementation.
+
+While both use a queue and a while loop, the key difference lies in how they identify zero-indegree nodes. The faster method maintains an indegree_list array 
+and checks for zero values in O(1) time. In contrast, my initial approach directly modifies the graph and counts remaining elements during each cycle. This is
+why the approach using `indegree_list` is much more efficient,
+
+It’s fascinating how the time complexity is calculated as O(V + E). Since every vertex enters the queue exactly once, the while-loop runs V times. More
+importantly, regardless of how many times the while loop iterates, every edge is visited exactly once across the for-loop. Because the total number of for loop
+iterations is fixed by the number of edges, the complexity is O(V + E) rather than O(VE).
+"""
+
+
 # Time Complexity: O (v^2)
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
