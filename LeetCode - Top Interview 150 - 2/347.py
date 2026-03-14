@@ -49,3 +49,7 @@ heappop()
 """
 Use a min-heap for Top K Largest and a max-heap for Top K Smallest.
 """
+
+"""
+When I want to find the $K$-th largest element or the top K elements, I should use a Min Heap and call heappop whenever the heap size exceeds K.
+"""
