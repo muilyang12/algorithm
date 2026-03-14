@@ -20,3 +20,21 @@ This problem is really interesting. For this type of backtracking problem, using
 and then calling it again after adding it. Since I'm calling DFS without adding an element, I cannot determine the target character using the current's length. This is why I need to pass 
 target_index as a separate parameter. I think I solved this one quite well.
 """
+
+
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        def dfs(current, target_index, result):
+            if target_index >= len(nums):
+                result.append([c for c in current])
+                return
+
+            dfs(current, target_index + 1, result)
+            current.append(nums[target_index])
+            dfs(current, target_index + 1, result)
+            current.pop()
+
+        result = []
+        dfs([], 0, result)
+
+        return result
