@@ -34,3 +34,9 @@ memo = [2, 100, 11, 103, 200]
 This is a very famous DP problem. As I've mentioned before, the core of any DP problem is clearly defining DP[i]. In this solution, 
 I defined DP[i] as the maximum profit when the $i$-th house is robbed.
 """
+
+"""
+In this problem, DP[i] is defined as the profit gained when the i-th house is robbed. Since you can't rob two houses in a row, you
+have to compare the options. "Robbing the house two steps back and the current one" vs "Robbing the house three steps back and the
+current one". By finding the maximum between these two paths, I can determine the optimal profit for that position.
+"""

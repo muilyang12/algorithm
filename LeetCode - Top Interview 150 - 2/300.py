@@ -35,5 +35,11 @@ a_{n} = a_{n-1} + ...
 """
 
 """
-In this case, memo[i] represents the maximum length of an Increasing Subsequence that ends with the $i$-th element. In array-based DP, memo[i] often denotes a state where the current element is the last element of the sequence. Let's keep this in mind.
+In this case, memo[i] represents the maximum length of an Increasing Subsequence that ends with the i-th element. In array-based DP, memo[i] often denotes a state where the current element is the last
+element of the sequence. Let's keep this in mind.
+"""
+
+"""
+The definition of DP[i] here is the maximum length of an increasing subsequence that ends with the i-th element. This is why a nested for-loop `for i, for j` is used. If `nums[j] < nums[i]`, then DP[i]
+can potentially be updated to `DP[j] + 1`. By taking the maximum of these values, I determine the longest subsequence ending at that specific position.
 """

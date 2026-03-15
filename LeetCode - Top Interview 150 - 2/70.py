@@ -16,3 +16,8 @@ class Solution:
 
 (N + 2) = N + (N + 1)
 """
+
+"""
+In this problem, DP[i] represents the number of ways to reach the i-th step. Since it is possible to arrive from either one step below or two steps below,
+the recurrence relation becomes DP[i] = DP[i - 1] + DP[i - 2].
+"""
