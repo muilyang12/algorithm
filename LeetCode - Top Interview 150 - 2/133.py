@@ -1,5 +1,32 @@
 class Solution:
     def cloneGraph(self, node: Optional["Node"]) -> Optional["Node"]:
+        def dfs_clone(node, hash):
+            if not node:
+                return None
+
+            if node in hash:
+                return hash[node]
+
+            new_node = Node(node.val)
+            hash[node] = new_node
+
+            for neighbor in node.neighbors:
+                new_node.neighbors.append(dfs_clone(neighbor, hash))
+
+            return new_node
+
+        return dfs_clone(node, {})
+
+
+"""
+In my previous solution, I stored the nodes in a hash map as `val: new_node`. Since the values were guaranteed to be unique in this problem, this approach worked fine. However, while solving 
+"138. Copy List with Random Pointer" today, I realized there is no unique constraint on the values, which made me wonder how to handle it. After talking with Gemini, I learned that the most
+standard approach for this type of problem is to map the nodes as `old_node: new_node` in the hash map.
+"""
+
+
+class Solution:
+    def cloneGraph(self, node: Optional["Node"]) -> Optional["Node"]:
         node_map = {}
 
         def clone_node(target_node):
