@@ -1,3 +1,14 @@
+# Time Complexity: O(n + (m - k) log k) = O(n log k), Space Complexity: O(n)
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        """
+        1. Create a dictionary named `num_counts` and populate it with the frequency of each number.
+        2. Iterate through the dictionary using a loop such as `for num, count in num_counts.items()`.
+        3. Insert each pair as `(count, num)` into a Min-Heap.
+        4. Perform `heappop(heap)` whenever the `len(heap)` exceeds k to ensure that only the top k elements remain.
+        """
+
+
 import heapq
 
 
