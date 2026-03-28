@@ -11,6 +11,67 @@ class Twitter:
         self.global_timer += 1
 
     def getNewsFeed(self, userId: int) -> List[int]:
+        target_users = [userId]
+
+        if userId in self.user_followees:
+            for followee in self.user_followees[userId]:
+                target_users.append(followee)
+
+        heap = []
+        for user_id in target_users:
+            if user_id in self.user_tweets:
+                tweet_id, timer = self.user_tweets[user_id][-1]
+
+                heapq.heappush(heap, (-timer, tweet_id, user_id, 2))
+
+        result = []
+        while heap and len(result) < 10:
+            _, tweet_id, user_id, next_index = heapq.heappop(heap)
+            result.append(tweet_id)
+
+            if len(self.user_tweets[user_id]) >= next_index:
+                next_tweet_id, next_timer = self.user_tweets[user_id][-next_index]
+                heapq.heappush(
+                    heap, (-next_timer, next_tweet_id, user_id, next_index + 1)
+                )
+
+        return result
+
+    def follow(self, followerId: int, followeeId: int) -> None:
+        if followerId == followeeId:
+            return
+
+        self.user_followees[followerId].add(followeeId)
+
+    def unfollow(self, followerId: int, followeeId: int) -> None:
+        if followerId not in self.user_followees:
+            return
+
+        self.user_followees[followerId].remove(followeeId)
+
+
+"""
+In my previous solution, I managed the target arrays and their indices in separate arrays, which felt a bit inefficient.
+
+After discussing it with Gemini, I came up with a great idea and implemented it again. In this new approach, I push either the current index or the next index into the heap along with
+the value. It is very similar to "23. Merge k Sorted Lists," where we could access the next element through node.next because the node itself was in the heap, eliminating the need for
+a separate pointers array. Here, by including the index in the heap, we can identify the next element to process without relying on any external arrays.
+"""
+
+
+class Twitter:
+    def __init__(self):
+        self.user_tweets = defaultdict(list)
+        self.user_followees = defaultdict(set)
+
+        self.global_timer = 1
+
+    def postTweet(self, userId: int, tweetId: int) -> None:
+        self.user_tweets[userId].append((tweetId, self.global_timer))
+
+        self.global_timer += 1
+
+    def getNewsFeed(self, userId: int) -> List[int]:
         targets = []
         targets.append(self.user_tweets[userId])
         for followee in self.user_followees[userId]:
