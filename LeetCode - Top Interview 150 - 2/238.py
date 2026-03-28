@@ -1,3 +1,25 @@
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        result = [1 for _ in nums]
+
+        for i in range(1, len(nums)):
+            result[i] = result[i - 1] * nums[i - 1]
+
+        suffix_product = 1
+        for i in range(len(nums) - 1, -1, -1):
+            result[i] = result[i] * suffix_product
+            suffix_product = suffix_product * nums[i]
+
+        return result
+
+
+"""
+Looking at it again, this idea doesn't seem that excessive. It is actually a very reasonable concept, even though directly creating separate arrays might feel more straightforward.
+
+Also, since the goal is to find the product "Except Self," it seems better to exclude the current element itself while calculating the prefix and suffix products array.
+"""
+
+
 """
 There is a follow-up question asking if I can solve the problem in O(1) extra space complexity. I feel like this optimization might be a bit excessive, so I just want to explain the logic 
 in words.
