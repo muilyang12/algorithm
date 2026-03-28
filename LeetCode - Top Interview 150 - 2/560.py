@@ -1,5 +1,6 @@
 """
-문제를 아래처럼 푼 후 Gemini랑 대화를 좀 했지. Gemini는 그 소리를 하더라고. prefix_sum을 배열로 갖지 않으면서 해보자고 말이야. 그치 사실상 아래 방식에서 풀면 약간 불필요하게 두 바퀴 도는 느낌이야. 각 인덱스별로 현재까지의 sum을 구해서 배열에 넣고 후처리 없이 다음 for loop에서 바로 다시 도는 거니까 말이야.
+After solving the problem this way, I had a discussion with Gemini. The suggestion was to try solving it without maintaining the prefix sums in a separate array. In fact, the current
+approach feels like it's unnecessarily looping through the array twice.
 """
 
 
