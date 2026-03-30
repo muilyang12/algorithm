@@ -34,7 +34,7 @@ Same number can exist?
 """
 
 """
-이렇게 사용을 하면 하나만 None인 경우까지 짧은 if 문으로 커버가 가능하다.
+Using it this way allows you to cover the case where only one node is `one` with a short if statement.
 
 `if not original_node and not node_to_compare:`
 
