@@ -1,5 +1,36 @@
 class Solution:
     def solve(self, board: List[List[str]]) -> None:
+        # for i
+        #     for j
+        #         if board[i][j] == "O"
+        #             dfs("O", "A")
+        
+        # for i
+        #     if board[i][0] == "A"
+        #         dfs("A", "O")
+        #     if board[i][len - 1] == "A"
+        #         dfs("A", "O")
+
+        # for j
+        #     if board[0][j] == "A"
+        #         dfs("A", "O")
+        #     if board[len - 1][j] == "A"
+        #         dfs("A", "O")
+
+        # for i
+        #     for j
+        #         if board[i][j] == "A"
+        #             board[i][j] = "X"
+
+
+"""
+For this problem, I need to keep the core idea in mind. First, process the grid using a standard DFS or BFS. Then, perform an additional DFS starting from the edges to restore the areas
+that are connected to the boundary.
+"""
+
+
+class Solution:
+    def solve(self, board: List[List[str]]) -> None:
         def dfs(row, col, from_char, to_char):
             board[row][col] = to_char
 
