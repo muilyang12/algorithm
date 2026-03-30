@@ -1,4 +1,57 @@
 class Node:
+    def __init__(self):
+        self.next_nodes = {}
+        self.is_end = False
+
+
+class WordDictionary:
+    def __init__(self):
+        self.root = Node()
+
+    def addWord(self, word: str) -> None:
+        current = self.root
+
+        for char in word:
+            if char not in current.next_nodes:
+                current.next_nodes[char] = Node()
+                current = current.next_nodes[char]
+            else:
+                current = current.next_nodes[char]
+
+        current.is_end = True
+
+    def search(self, word: str) -> bool:
+        current = self.root
+
+        for char in word:
+            if char == ".":
+                pass
+            elif char in current.next_nodes:
+                current = current.next_nodes[char]
+            else:
+                return False
+
+        if not current.is_end:
+            return False
+
+        return True
+
+
+"""
+addWord: If exists already?
+"""
+
+"""
+I am going to stop solving this problem for now. The next step is to implement the DFS function. I need to handle the wildcard `.` character by recursively checking all currently registered
+charactersat that position. It seems like the function signature should be something like `_dfs(node, target_string)`.
+
+However, after discussing it with Gemini, I was advised not to pass sliced strings into the function. This follows the same logic we used in the "pre and in" problem. Slicing inside a recursive
+function can significantly increase the time complexity to  O(n^2), so I should avoid passing sliced results. Instead, I should store the target string as a class field and only pass the target
+index to the DFS function. A signature like `_dfs(node, word, target_index)` should work perfectly.
+"""
+
+
+class Node:
     def __init__(self, char, depth):
         self.char = char
         self.is_end = False
