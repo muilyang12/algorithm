@@ -1,5 +1,36 @@
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        if not head.next.next:
+            first = head
+            second = head.next
+
+            second.next = first
+            first.next = None
+
+            return second
+
+        first = head
+        second = head.next
+        third = head.next.next
+
+        while third:
+            second.next = first
+
+            first = second
+            second = third
+            third = third.next
+
+        second.next = first
+
+        head.next = None
+
+        return second
+
+
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
             return head
 
