@@ -1,5 +1,35 @@
 class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+        def dfs_delte_node(node, target):
+            if not node:
+                return None
+
+            if target < node.val:
+                node.left = dfs_delte_node(node.left, target)
+            elif target > node.val:
+                node.right = dfs_delte_node(node.right, target)
+            else:
+                if not node.left and not node.right:
+                    return None
+                elif not node.left:
+                    return node.right
+                elif not node.right:
+                    return node.left
+
+                current = node.right
+                while current.left:
+                    current = current.left
+
+                node.val = current.val
+                node.right = dfs_delte_node(node.right, current.val)
+
+            return node
+
+        return dfs_delte_node(root, key)
+
+
+class Solution:
+    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
         def dfs_delete_target(node, key):
             if not node:
                 return None

@@ -1,5 +1,21 @@
 class Solution:
     def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+        def dfs_insert_value(node):
+            if not node:
+                return TreeNode(val)
+
+            if val < node.val:
+                node.left = dfs_insert_value(node.left)
+            elif val > node.val:
+                node.right = dfs_insert_value(node.right)
+
+            return node
+
+        return dfs_insert_value(root)
+
+
+class Solution:
+    def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         def dfs_insert(node, val):
             if not node:
                 return TreeNode(val)
