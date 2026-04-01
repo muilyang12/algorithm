@@ -1,5 +1,30 @@
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        heap = []
+
+        for i in range(len(lists)):
+            node = lists[i]
+
+            if node:
+                heapq.heappush(heap, (node.val, i, node))
+
+        dummy = ListNode(-1)
+        current = dummy
+
+        while heap:
+            _, index, node = heapq.heappop(heap)
+
+            if node.next:
+                heapq.heappush(heap, (node.next.val, index, node.next))
+
+            current.next = node
+            current = current.next
+
+        return dummy.next
+
+
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         dummy = ListNode(-1)
         current = dummy
 

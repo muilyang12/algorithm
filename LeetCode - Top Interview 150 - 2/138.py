@@ -25,3 +25,25 @@ the values were unique, so I used the value as the key, but that's not the case 
 After talking with Gemini, it suggested storing them in the hash map as `old_node: new_node`. While using the value worked for the Clone Graph problem, Gemini added that the `old_node: new_node` approach
 would have been better even in that case.
 """
+
+
+class Solution:
+    def copyRandomList(self, head: "Optional[Node]") -> "Optional[Node]":
+        old_new_map = {}
+
+        def dfs_copy_node(node):
+            if not node:
+                return None
+
+            if node in old_new_map:
+                return old_new_map[node]
+
+            new_node = Node(node.val)
+            old_new_map[node] = new_node
+
+            new_node.next = dfs_copy_node(node.next)
+            new_node.random = dfs_copy_node(node.random)
+
+            return new_node
+
+        return dfs_copy_node(head)
