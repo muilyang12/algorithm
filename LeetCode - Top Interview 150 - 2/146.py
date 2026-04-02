@@ -1,3 +1,12 @@
+"""
+This problem is not that difficult to solve as long as you remember a few key points.
+1. When creating the `Node` class, you must use a structure that tracks both the `before` and `after`.
+2. You need two helper functions, `remove_node(node)` and `add_front(node)`.
+3. The `remove_node` function is where the real challenge lies because you must carefully handle different cases, such as when the node is the first, in the middle, the last,
+or the only node in the list.
+"""
+
+
 class Node:
     def __init__(self, key, value):
         self.key = key
