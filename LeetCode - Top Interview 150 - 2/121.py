@@ -1,5 +1,23 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        left = 0
+        right = 0
+
+        max_profit = -math.inf
+
+        while right < len(prices):
+            max_profit = max(max_profit, prices[right] - prices[left])
+
+            if prices[right] < prices[left]:
+                left = right
+
+            right += 1
+
+        return max_profit
+
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
         min_price = prices[0]
         max_profit = 0
 
