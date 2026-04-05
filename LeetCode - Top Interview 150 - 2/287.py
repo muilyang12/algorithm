@@ -1,5 +1,43 @@
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
+        slow = nums[0]
+        fast = nums[nums[0]]
+
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+        
+        slow = 0
+        
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+        
+        return nums[slow]
+
+
+"""
+               D                   D
+               -----               -----     |         |        |
+L              C
+===============++++++++++
+0 -> 1 -> 3 -> 2 -> 4 -> 2 -> 4 -> 2 -> 4 -> 2 -> 4 -> 2 -> 4 -> 2 -> 4 -> 2 -> 4 -> 2
+                    s                   f
+^                                       ^
+
+Distance `s` moves = L + D
+Distance `f` moves = L + D + nC
+
+2(L + D) = L + nC + D
+L = nC - D
+
+The key is that if the pointer f moves by nC - D, it will reach the start of the cycle. In other words, if there is another pointer starting from 0 at this point, both f and
+that pointer will meet at the cycle's entrance at the exact same time after advancing by L or nC - D.
+"""
+
+
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
         slow = 0
         fast = 0
 
