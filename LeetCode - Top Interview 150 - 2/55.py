@@ -1,5 +1,37 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
+        reachable = [False for _ in nums]
+        reachable[0] = True
+
+        for i in range(len(reachable)):
+            if not reachable[i]:
+                break
+
+            max_reachable = min(i + nums[i], len(reachable) - 1)
+            
+            for j in range(max_reachable, i, -1):
+                if reachable[j]:
+                    break
+                
+                reachable[j] = True
+
+        return reachable[-1]
+
+
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        max_reachable = 0
+        for i in range(len(nums)):
+            if i > max_reachable:
+                return False
+            
+            max_reachable = max(max_reachable, i + nums[i])
+        
+        return True
+
+
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
         max_reachable = 0
 
         for index, num in enumerate(nums):
