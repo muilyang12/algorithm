@@ -1,3 +1,12 @@
+class Solution:
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        # 1. The core idea is that if you start at index `i` and get stuck at index `j`, the next `start_point`` should be updated to `j + 1`.
+        # 2. `start_point, current_point, gas_left, distance` 네 개의 변수를 사용해야 한다.
+        # 3. while distance < length
+        # 4. `gas_left += gas - cost`
+        # 5. if `gas_left < 0`, then you must restart the journey `start_point = current + 1`, `current = current + 1`
+
+
 # Time Complexity O(n)
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
