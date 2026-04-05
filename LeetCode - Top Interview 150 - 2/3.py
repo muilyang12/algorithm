@@ -1,3 +1,42 @@
+"""
+1. Consider only what comes in and goes out through the right and left pointers. If you recalculate the entire range every time, it is not a Sliding Window approach.
+2. In loop, process first, then move the pointers.
+3. Since processing occurs first within the loop, setting initial values outside the loop makes the processing in the first iteration ambiguous. Therefore, let's start with both left and right at 0.
+4. If the window size can change, you must use a nested loop where the inner loop handles the left pointer.
+5. Since the right pointer increases in every cycle, using a for-loop for the outer loop is also an excellent approach.
+"""
+
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        result = 0
+
+        left = 0
+        right = 0
+
+        char_set = set()
+
+        while right < len(s):
+            if s[right] not in char_set:
+                char_set.add(s[right])
+                right += 1
+
+                result = max(result, right - left)
+
+                continue
+
+            while s[right] in char_set:
+                char_set.remove(s[left])
+                left += 1
+
+            char_set.add(s[right])
+            right += 1
+
+            result = max(result, right - left)
+
+        return result
+
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         result = 0
