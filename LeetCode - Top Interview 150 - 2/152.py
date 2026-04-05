@@ -1,5 +1,15 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
+        # 1. memo0, memo1 = [0 for _], [0 for _]
+        # 2. memo0[i] = max(memo0[i - 1] * nums[i], memo1[i - 1] * nums[i], nums[i])
+        # 3. memo1[i] = min(...)
+        # 4. result = max(result, memo0[i], memo1[i])
+        # 5. The most critical point is that memo0 stores the maximum value while memo1 stores the minimum value.
+        # 6. Also, you must include the current element, nums[i], when performing the updates.
+
+
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
         result = nums[0]
 
         dp0 = [0 for _ in nums]
