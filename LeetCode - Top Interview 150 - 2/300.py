@@ -1,5 +1,15 @@
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
+        # memo = [1 for len(nums)]
+        # for i 0 to len - 1
+        # for j 0 to i - 1
+        # if i > j then max memo[i] = max(memo[i], memo[j] + 1)
+        # result = max(memo)
+        # Alternatively, you can continuously update the result variable at the same time you update the `memo`` array. result = max(result, memo[i])
+
+
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
         memo = [1 for _ in range(len(nums))]
         result = 1
 
