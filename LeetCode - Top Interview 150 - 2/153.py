@@ -1,3 +1,17 @@
+"""
+In problems where you have to find something in a Rotated Sorted Array, the key is proper case analysis.
+
+[0,1,2,3,4,5,6]
+       ^
+[4,5,6,0,1,2,3]
+       ^
+[2,3,4,5,6,0,1]
+       ^
+[5,6,0,1,2,3,4]
+       ^
+"""
+
+
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         if len(nums) == 1:

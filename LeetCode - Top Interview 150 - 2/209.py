@@ -1,3 +1,35 @@
+"""
+To summarize
+1. Only consider the elements coming in and going out through the right and left pointers. If you recalculate the entire range every time, it's not a true Sliding Window approach.
+2. Use a pattern where you process the logic inside the loop and then move the pointers.
+3. Since processing happens first within the loop, setting initial values outside can make the first iteration tricky. Therefore, start with both `left` and `right` at 0.
+4. If the window size is variable (not a fixed value), you must use a nested loop structure where the inner loop is responsible for handling the `left` pointer.
+"""
+
+
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        left = 0
+        right = 0
+
+        min_size = math.inf
+
+        current_sum = 0
+
+        while right < len(nums):
+            if current_sum < target:
+                current_sum += nums[right]
+                right += 1
+
+            while current_sum >= target:
+                min_size = min(min_size, right - left)
+
+                current_sum -= nums[left]
+                left += 1
+
+        return min_size if min_size != math.inf else 0
+
+
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         left = 0
