@@ -1,5 +1,23 @@
 class TimeMap:
     def __init__(self):
+        self.data = {}
+
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        # self.data[key].append((timestamp, value))
+
+    def get(self, key: str, timestamp: int) -> str:
+        # target = self.data[key]
+        # left = 0
+        # righ = len(target) - 1
+
+        # while l <= r:
+        #     m = (l + r) // 2
+
+        #     target[mid][0] vs timestamp
+
+
+class TimeMap:
+    def __init__(self):
         self.hash = {}
 
     def set(self, key: str, value: str, timestamp: int) -> None:
