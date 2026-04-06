@@ -1,3 +1,19 @@
+"""
+[2,4,5,6,7,0,1]
+       ^
+
+left < target < mid: Move to left
+left > target < mid: Move to right
+target > mid: Move to right
+
+[6,7,0,1,2,4,5]
+       ^
+target < mid: Move to left
+left < target > mid: Move to left
+left > taget > mid: Move to right
+"""
+
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left = 0

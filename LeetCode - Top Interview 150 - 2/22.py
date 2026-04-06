@@ -1,3 +1,15 @@
+"""
+def dfs(current, open_count, close_count):
+    if open_count + close_count == 2 * n:
+        result.append(current)
+
+    if
+    dfs(current + "(", o + 1, c)
+    if
+    dfs(current + ")", o, c + 1)
+"""
+
+
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         result = []
