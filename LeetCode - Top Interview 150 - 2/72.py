@@ -1,3 +1,32 @@
+"""
+The 2D DP problems involving strings, like "1143. Longest Common Subsequence", "72. Edit Distance", and "115. Distinct Subsequences" are truly challenging.
+
+In "1143. Longest Common Subsequence", the values for `memo[i][0]` were simply 0, so I didn't need to worry too much about the initial values. However, in "72. Edit Distance" the value for `memo[i][0]` must be `i`
+because it takes i deletions to match. This means I really need to be careful about setting the initial values in this case.
+"""
+
+
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        memo = [[0 for _ in range(len(word2) + 1)] for __ in range(len(word1) + 1)]
+        for i in range(len(memo)):
+            memo[i][0] = i
+        for j in range(len(memo[0])):
+            memo[0][j] = j
+
+        for i in range(1, len(word1) + 1):
+            for j in range(1, len(word2) + 1):
+                if word1[i - 1] == word2[j - 1]:
+                    memo[i][j] = memo[i - 1][j - 1]
+                else:
+                    insert = memo[i - 1][j] + 1
+                    delete = memo[i][j - 1] + 1
+                    replace = memo[i - 1][j - 1] + 1
+                    memo[i][j] = min(insert, delete, replace)
+
+        return memo[-1][-1]
+
+
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         dp = [[0 for _ in range(len(word2) + 1)] for __ in range(len(word1) + 1)]
