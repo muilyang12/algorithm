@@ -1,3 +1,23 @@
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        result = 0
+
+        left = 0
+
+        included = set()
+
+        for right in range(len(s)):
+            while s[right] in included:
+                included.remove(s[left])
+                left += 1
+
+            included.add(s[right])
+
+            result = max(result, right - left + 1)
+
+        return result
+
+
 """
 1. Consider only what comes in and goes out through the right and left pointers. If you recalculate the entire range every time, it is not a Sliding Window approach.
 2. In loop, process first, then move the pointers.
