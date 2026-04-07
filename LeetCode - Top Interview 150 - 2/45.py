@@ -1,3 +1,11 @@
+"""
+jump_count, reachable_with_current_count, max_rechable
+
+When arrives at reachable_with_current_count, rwcc = mr
+
+Updates mr like 55.
+"""
+
 # Time Complexity: O(n), Space Complexity: O(1)
 class Solution:
     def jump(self, nums: List[int]) -> int:

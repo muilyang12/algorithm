@@ -1,3 +1,15 @@
+"""
+start_point, current_sum, result
+
+for:
+cs < 0
+sp = i
+cs = nums[i]
+
+r = max(r, cs)
+"""
+
+
 # Time Complexity: O(n)
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:

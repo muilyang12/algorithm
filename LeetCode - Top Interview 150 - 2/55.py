@@ -1,3 +1,8 @@
+"""
+max_reachable
+"""
+
+
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         reachable = [False for _ in nums]

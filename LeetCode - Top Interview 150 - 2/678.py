@@ -1,4 +1,26 @@
 """
+s = "(*))"
+1 0 0 0
+1 2 1 0
+
+=====
+
+open_count_min
+open_count_max
+
+"(" +1 +1
+"*" -1 +1
+")" -1 -1
+
+min < 0 -> set 0
+max < 0 -> return False
+
+min == 0 -> return True
+min != 0 -> return False
+"""
+
+
+"""
 Core idea
 1. Use two variables, `open_count_min` and `open_count_max`.
 2. When you encounter a "*", the gap between these minimum and maximum counts widens by two because the asterisk can represent a ) which is -1, an empty string which is 0,
