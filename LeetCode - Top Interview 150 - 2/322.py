@@ -1,3 +1,21 @@
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        memo = [math.inf for _ in range(amount + 1)]
+        memo[0] = 0
+
+        for coin in coins:
+            for i in range(coin, len(memo)):
+                memo[i] = min(memo[i], memo[i - coin] + 1)
+
+        return memo[amount] if memo[amount] != math.inf else -1
+
+
+"""
+amount = 11
+[0,1,1,2,2,1,2,2,3,3,2,3]
+       ^
+"""
+
 """
 This problem is identical to "279. Perfect Squares".
 
