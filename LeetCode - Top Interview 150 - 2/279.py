@@ -1,4 +1,9 @@
 """
+If the problem is about Permutations, the outer loop should be for memo and the inner loop should be for coin.
+If the problem is about Combinations, the outer loop should be for coin and the inner loop should be for memo.
+"""
+
+"""
 Identical to "322. Coin Change".
 
 There are a few key elements to remember in Dynamic Programming.
