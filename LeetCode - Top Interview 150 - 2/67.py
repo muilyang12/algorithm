@@ -1,5 +1,30 @@
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
+        x, y = int(a, 2), int(b, 2)
+
+        digit_sum, digit_carry = x ^ y, (x & y) << 1
+
+        while digit_carry:
+            digit_sum, digit_carry = (
+                digit_sum ^ digit_carry,
+                (digit_sum & digit_carry) << 1,
+            )
+
+        return bin(digit_sum)[2:]
+
+
+"""
+Keep the usage of binary-related functions in mind.
+1. bin(3) = "0b11"
+2. int("11", 2) = 3
+
+It is also important to note that the result of `a & b << 1` is different from `(a & b) << 1`. Since the shift operator has a higher precedence than the AND operator, writing it the first way will cause the 
+computer to execute it as `a & (b << 1)`. I need to be very careful with this distinction.
+"""
+
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
         large_length = max(len(a), len(b))
 
         result = ""
