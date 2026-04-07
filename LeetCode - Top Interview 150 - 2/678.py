@@ -1,5 +1,14 @@
 """
-`open_count_min`, `open_count_max` 이렇게 두 개의 변수를 사용한다는 아이디어. "*"를 만나게 되면 min, max가 2 칸씩 벌어지게 돼. 왜냐면 ")"인 경우에는 -1 일테고 ""인 경우에는 0일테고 ")"인 경우에는 +1 일테니까. 그리고 min이 음수가 되면 0으로 다시 세팅해준다. 왜냐면 음수가 된 경우에는 그냥 '아 아까 만났던 한 "*"가 ")"는 아니었겠구나' 이런 느낌으로 처리하는 거지. for loop 안에서 max가 음수로 내려가지면 그거는 "*"도 부족하고 ")"가 너무 많다는 의미이니 바로 False이야. 그리고 for loop 밖에서 min이 여전히 양수이면 그거는 "*"도 부족하고 "("가 너무 많다는 의미이니 False인거고.
+Core idea
+1. Use two variables, `open_count_min` and `open_count_max`.
+2. When you encounter a "*", the gap between these minimum and maximum counts widens by two because the asterisk can represent a ) which is -1, an empty string which is 0,
+or a "(" which is +1.
+3. If the `open_count_min count becomes negative, you should reset it to 0 because this adjustment simply means that a previous "*" must not have functioned as a closing
+parenthesis in that case.
+4. If the maximum count ever drops below zero during the for-loop, you must call `return False` immediately since this indicates that there are too many closing parentheses
+even with the help of "*"s.
+5. If the minimum count remains positive after the loop finishes, you should also call `return False` because it signifies that there were too many opening parentheses and
+not enough asterisks to balance them out.
 """
 
 """
