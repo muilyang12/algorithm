@@ -1,3 +1,15 @@
+"""
+Time Complexity: O(n), Space Complexity: O(n)
+
+=====
+
+Edge Cases
+- []
+- [Node(5)]
+- [Node(5), N(3), null, N(1)]
+"""
+
+
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         def dfs_check_bst_validity(node, min_value, max_value):

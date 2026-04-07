@@ -1,3 +1,56 @@
+"""
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
+              !                 @
+
+result = 0 + 0 + 1
+
+max_left = -1, 0, 1
+max_right = -1, 1, 1
+
+while left <= right
+    max_left = max(max_left, height[left])
+    max_right = max(max_right, height[right])
+
+    result += min(max_left, max_right) - height[left]
+
+=====
+
+The fact that it is the left pointer's turn to move means the current left value is smaller than the right value. This implies that in the process of considering the minimum, the value at the left is what actually
+matters. Any taller values in the middle that are greater than `max_right` simply cannot contribute to determining the water level at that specific position.
+
+=====
+
+Time Complexity: O(n), Space Complexity: O(1)
+"""
+
+
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        left = 0
+        right = len(height) - 1
+
+        result = 0
+
+        max_left = -1
+        max_right = -1
+
+        while left <= right:
+            max_left = max(max_left, height[left])
+            max_right = max(max_right, height[right])
+            
+            if height[left] <= height[right]:
+                result += max(0, min(max_left, max_right) - height[left])
+
+                left += 1
+
+            else:
+                result += max(0, min(max_left, max_right) - height[right])
+
+                right -= 1
+
+        return result
+
+
 class Solution:
     def trap(self, height: List[int]) -> int:
         left = 0
