@@ -1,3 +1,22 @@
+"""
+graph = {before: [after]}
+indegree_counts = [0 for num_nodes]
+indegree_counts[after] += 1
+
+indegree_counts[i]: Count of nodes pointing node i
+
+when indegree_counts[i] == 1, put it in queue
+
+while queue:
+    for graph[target]
+        indegree -= 1
+
+        if == 0, append in the queue
+
+if indegree > 0, there is a cycle
+"""
+
+
 # Time Complexity: O(V + E)
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:

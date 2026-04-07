@@ -1,3 +1,24 @@
+"""
+candidates = [2,3,6,7]
+target = 7
+
+dfs
+temp = []
+current_sum
+
+[2,2,3]
+cs = 7
+result.append(temp[:])
+
+[2,3,3]
+cs = 8
+
+[7]
+cs = 7
+result.append(temp[:])
+"""
+
+
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         self.result = []
