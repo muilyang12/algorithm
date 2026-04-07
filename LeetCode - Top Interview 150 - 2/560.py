@@ -1,4 +1,11 @@
 """
+0 or negative integer?
+
+"53. Maximum Subarray" vs "560. Subarray Sum Equals K"
+Greedy vs Prefix Sum
+"""
+
+"""
 After solving the problem this way, I had a discussion with Gemini. The suggestion was to try solving it without maintaining the prefix sums in a separate array. In fact, the current
 approach feels like it's unnecessarily looping through the array twice.
 """
