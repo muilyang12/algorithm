@@ -1,3 +1,31 @@
+"""
+This reminds me of a recent NeetCode video where he reflected on an interview he took in the past. In that video, he expressed regret because he tried to avoid using global variables
+without even checking with the interviewer, even though doing so would have made the problem much easier to solve. This problem might be the very one he was talking about.
+"""
+
+
+class Solution:
+    def maxPathSum(self, root: Optional[TreeNode]) -> int:
+        self.max_sum = -math.inf
+
+        def dfs_one_way_path_sum(node):
+            if not node:
+                return 0
+
+            left_path_sum = dfs_one_way_path_sum(node.left)
+            right_path_sum = dfs_one_way_path_sum(node.right)
+
+            self.max_sum = max(
+                self.max_sum, node.val + max(0, left_path_sum) + max(0, right_path_sum)
+            )
+
+            return node.val + max(0, left_path_sum, right_path_sum)
+
+        dfs_one_way_path_sum(root)
+
+        return self.max_sum
+
+
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         def dfs_get_max_sum(node):

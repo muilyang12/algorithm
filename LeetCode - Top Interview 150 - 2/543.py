@@ -1,3 +1,29 @@
+"""
+This reminds me of a recent NeetCode video where he reflected on an interview he took in the past. In that video, he expressed regret because he tried to avoid using global variables
+without even checking with the interviewer, even though doing so would have made the problem much easier to solve. This problem might be the very one he was talking about.
+"""
+
+
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        self.max_diameter = -math.inf
+
+        def dfs_get_radius(node):
+            if not node:
+                return 0
+
+            left_radius = dfs_get_radius(node.left)
+            right_radius = dfs_get_radius(node.right)
+
+            self.max_diameter = max(self.max_diameter, left_radius + right_radius)
+
+            return max(left_radius, right_radius) + 1
+
+        dfs_get_radius(root)
+
+        return self.max_diameter
+
+
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         if not root:
