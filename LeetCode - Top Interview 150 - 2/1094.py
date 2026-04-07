@@ -1,3 +1,32 @@
+"""
+heap = [] -> Min Heap
+num_people = 0
+
+trips = [[2,1,5],[3,3,7]]
+                  ^
+
+heap = [(5, 2)]
+num_people = 2
+
+trips = [[2,1,5],[3,5,7]]
+                          ^
+heap = [(7,3)]
+num_people = 3
+
+=====
+
+Time Complexity: O(n log n), Space Complexity: O(n)
+
+=====
+
+Edge Cases
+- [0, 3, 5]
+- [3, 5, 5]
+- trips = []
+- trips = [[100, 1, 5]]
+"""
+
+
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         sorted_trips = sorted(trips, key=lambda x: x[1])

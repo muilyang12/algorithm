@@ -1,3 +1,33 @@
+"""
+class MedianFromStream:
+
+left = [] -> Max Heap
+right = [] -> Min Heap
+
+len(left) == len(right)
+or
+len(left) == len(right) + 1
+
+add to left
+
+left <-> right (Swap)
+
+Balancing
+
+=====
+
+Input sequence: [4, 10, 8, 1, 3, 7]
+
+[4, 1, 3] [7, 8, 10]
+
+M: (4 + 7) / 2
+
+=====
+
+Time Complexity: addNum - O(log n + log n + log n) = O(log n), Space Complexity: O(n)
+"""
+
+
 import heapq
 
 

@@ -1,3 +1,42 @@
+"""
+s = "aaabb"
+
+heap = []
+
+{
+    "a": 3,
+    "b": 2
+}
+
+result = ""
+
+heap = [(-3, "a"), (-2, "b")]
+previous = None
+
+while heap or previous:
+heap.pop()
+result += ___
+previous = ___
+
+=====
+
+Do a dry run with case 1
+
+=====
+
+Edge Cases
+- ""
+- "a"
+- "ab"
+- "aa"
+- "abcde"
+
+=====
+
+Time Complexity: O(k log k + n log k), Space Complexity: O(log k)
+"""
+
+
 class Solution:
     def reorganizeString(self, s: str) -> str:
         char_counts = {}
