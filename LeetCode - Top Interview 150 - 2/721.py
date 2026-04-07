@@ -1,3 +1,44 @@
+"""
+accounts = [
+["John","johnsmith@mail.com","john_newyork@mail.com"],
+["John","john00@mail.com","johnsmith@mail.com"],
+["Mary","mary@mail.com"],
+["John","johnnybravo@mail.com"]
+]
+
+{
+johnsmith@mail.com: set(john_newyork@mail.com, john00@mail.com)
+john_newyork@mail.com: set(johnsmith@mail.com)
+john00@mail.com: set(johnsmith@mail.com)
+mary@mail.com: set()
+johnnybravo@mail.com: set()
+}
+
+{
+johnsmith@mail.com: John
+john00@mail.com: John
+mary@mail.com: Mary
+johnnybravo@mail.com: John
+}
+
+checked_emails = set()
+
+for key, value in email_name_map.items()
+
+johnsmith@mail.com: John
+checked_emails = {johnsmith@mail.com, john_newyork@mail.com, john00@mail.com}
+emails = [johnsmith@mail.com, john_newyork@mail.com, john00@mail.com]
+
+[value] + sorted(emails)
+
+john00@mail.com: John
+
+=====
+
+Time Complexity: O(nk^2 + nk log nk) (k: Max number of emails for one person)
+"""
+
+
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
         email_graph = {}

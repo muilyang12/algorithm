@@ -1,3 +1,29 @@
+"""
+[
+[1,2,2,3,5],
+[3,2,3,4,4],
+[2,4,5,3,1],
+[6,7,1,4,5],
+[5,1,1,2,4]
+]
+
+memo = [
+[0,0,0,0,0]
+[0,0,0,0,0]
+[0,0,0,0,0]
+[0,0,0,0,0]
+[0,0,0,0,0]
+]
+
+Increasing from pacific = 1
+Increasing from atlantic = 2 (If it was 1, add to result)
+
+=====
+
+Time Complexity: O(mn + mn) = O(mn), Space Complexity: O(mn)
+"""
+
+
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         result = [[0, len(heights[0]) - 1], [len(heights) - 1, 0]]
