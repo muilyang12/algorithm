@@ -1,3 +1,19 @@
+"""
+intervals sorted?
+
+=====
+
+intervals = [(0,40),(5,10),(15,20)]
+                             ^
+
+end_time_heap = [20, 40]
+count_rooms = 2
+
+for interval in intervals:
+
+Time Complexity: O(n log n + n log k) = O(n log n), Space Complexity: O(k) (k: Number of rooms)
+"""
+
 # Time Complexity: O(n log n + n log k) = O(n log n), Space Complexity: O(k) = O(n) (k: Number of used rooms)
 class Solution:
     def minMeetingRooms(self, intervals: List[Interval]) -> int:

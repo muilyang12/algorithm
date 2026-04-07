@@ -1,3 +1,20 @@
+"""
+intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]]
+newInterval = [4,8]
+
+target = None
+array to compare = [12,16]
+
+result = [[1,2], [3,10], [12,16]]
+
+for interval in intervals:
+
+[3,8] [8,10] => [3,10]
+
+Time Complexity: O(n), Space Complexity: O(1)
+"""
+
+
 class Solution:
     def insert(
         self, intervals: List[List[int]], newInterval: List[int]

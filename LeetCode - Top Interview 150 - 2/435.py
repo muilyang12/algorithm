@@ -1,3 +1,20 @@
+"""
+intervals sorted?
+
+intervals = [[1,2],[1,3],[2,3],[3,4]]
+                                !     @
+
+higher end value -> removed
+
+count = 1
+
+first_end
+second_start
+
+Time Complexity: O(n log n + n), Space Complexity: O(1)
+"""
+
+
 # Time Complexity: O(n log n + n) = O(n log n)
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
