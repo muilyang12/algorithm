@@ -1,3 +1,10 @@
+"""
+The solution below is a bit disappointing. If you want to check for divisibility, you should first verify whether the length of the original string is a multiple of the divisor's
+length. If they share a multiple relationship, you should then check if divisor * count == original. The approach of building a string using current += char is quite inefficient
+compared to this method.
+"""
+
+
 class Solution:
     def gcdOfStrings(self, str1: str, str2: str) -> str:
         result = ""
