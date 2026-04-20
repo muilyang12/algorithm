@@ -1,3 +1,12 @@
+"""
+It is interesting how these two problems, "232. Implement Queue using Stacks" and "225. Implement Stack using Queues," form a perfect pair.
+
+Both problems require using two Stacks or two Queues, respectively, to simulate the behavior of the other data structure. The difficulty lies in the fact that while one operation
+might only require moving elements once, another might require moving them twice to maintain the correct order. Because of this complexity, it is difficult to visualize the movement
+logic purely in your head. It is much more effective to actually draw out the shifting logic in the comments.
+"""
+
+
 class MyStack:
     def __init__(self):
         self.queue1 = deque()
@@ -36,3 +45,12 @@ class MyStack:
             return True
         else:
             return False
+
+
+"""
+1, 2, 3, 4, 5
+
+
+queue1 = [3, 2, 1]
+queue2 = [4, 3, 2, 1]
+"""
