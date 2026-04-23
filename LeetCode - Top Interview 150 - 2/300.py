@@ -1,3 +1,50 @@
+"""
+The previous approach for this problem used nested for loops resulting in O(n^2) complexity. However since "354. Russian Doll Envelopes" requires an O(n log n) solution,
+I solved this problem once again using Binary Search to achieve that same efficiency.
+
+nums = [10,9,2,5,3,7,101,18]
+
+[10]
+[9]
+[2]
+[2, 5]
+[2, 3]
+[2, 3, 7]
+[2, 3, 7, 101]
+[2, 3, 7, 18]
+"""
+
+
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        incresing_ss = [nums[0]]
+
+        for i in range(1, len(nums)):
+            if nums[i] > incresing_ss[-1]:
+                incresing_ss.append(nums[i])
+            else:
+                left = 0
+                right = len(incresing_ss) - 1
+
+                while left <= right:
+                    mid = (left + right) // 2
+
+                    if incresing_ss[mid] < nums[i]:
+                        left = mid + 1
+                    else:
+                        right = mid - 1
+
+                incresing_ss[left] = nums[i]
+
+        return len(incresing_ss)
+
+
+"""
+9
+2, 5
+"""
+
+
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         # memo = [1 for len(nums)]
