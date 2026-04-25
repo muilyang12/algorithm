@@ -1,20 +1,25 @@
-"""
-num1 = "123"
-          ^
-num2 = "456"
-         ^
-
-3 * 6 = 1, 8 (index = 0, 0)
-3 * 5 = 1, 5 (index = 0, 1)
-3 * 4 = 1, 2 (index = 0, 2)
-
-[0,0,1,3,6,8]
-"""
-
-
+# Time Complexity: O(nm)
 class Solution:
     def multiply(self, num1: str, num2: str) -> str:
-        # digit_nums = [0 for _ in range(len(num1) + len(num2))]
+        if num1 == "0" or num2 == "0":
+            return  "0"
 
-        # for i in range(len(nums1)):
-        #     for j in range(len(nums2)):
+        digits = [0] * (len(num1) + len(num2) + 1)
+
+        for i in range(len(num1)):
+            num_one = int(num1[len(num1) - 1 - i])
+
+            for j in range(len(num2)):
+                temp_number = num_one * int(num2[len(num2) - 1 - j]) + digits[i + j]
+
+                digits[i + j] = temp_number % 10
+                digits[i + j + 1] += temp_number // 10
+
+        while digits and digits[-1] == 0:
+            digits.pop()
+
+        result = ""
+        for i in range(len(digits) - 1, -1, -1):
+            result += str(digits[i])
+
+        return result
