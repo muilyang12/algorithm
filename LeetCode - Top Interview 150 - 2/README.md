@@ -12,7 +12,7 @@
 |   O    | 14   | [Link](https://leetcode.com/problems/longest-common-prefix)                                               | Longest Common Prefix                                               | Easy       |
 |   O    | 15   | [Link](https://leetcode.com/problems/3sum)                                                                | 3Sum                                                                | Medium     |
 |   O    | 18   | [Link](https://leetcode.com/problems/4sum)                                                                | 4Sum                                                                | Medium     |
-|        | 20   | [Link](https://leetcode.com/problems/valid-parentheses)                                                   | Valid Parentheses                                                   | Easy       |
+|   O    | 20   | [Link](https://leetcode.com/problems/valid-parentheses)                                                   | Valid Parentheses                                                   | Easy       |
 |   O    | 26   | [Link](https://leetcode.com/problems/remove-duplicates-from-sorted-array)                                 | Remove Duplicates from Sorted Array                                 | Easy       |
 |   O    | 27   | [Link](https://leetcode.com/problems/remove-element)                                                      | Remove Element                                                      | Easy       |
 |   O    | 31   | [Link](https://leetcode.com/problems/next-permutation)                                                    | Next Permutation                                                    | Medium     |
@@ -32,7 +32,7 @@
 |   O    | 217  | [Link](https://leetcode.com/problems/contains-duplicate)                                                  | Contains Duplicate                                                  | Easy       |
 |   O    | 242  | [Link](https://leetcode.com/problems/valid-anagram)                                                       | Valid Anagram                                                       | Easy       |
 |   O    | 300  | [Link](https://leetcode.com/problems/longest-increasing-subsequence)                                      | Longest Increasing Subsequence                                      | Medium     |
-|        | 359  | [Link](https://leetcode.com/problems/logger-rate-limiter)                                                 | Logger Rate Limiter                                                 | Easy       |
+|   O    | 359  | [Link](https://leetcode.com/problems/logger-rate-limiter)                                                 | Logger Rate Limiter                                                 | Easy       |
 |   O    | 394  | [Link](https://leetcode.com/problems/decode-string)                                                       | Decode String                                                       | Medium     |
 |   O    | 424  | [Link](https://leetcode.com/problems/longest-repeating-character-replacement)                             | Longest Repeating Character Replacement                             | Medium     |
 |        | 1757 | [Link](https://leetcode.com/problems/recyclable-and-low-fat-products)                                     | Recyclable and Low Fat Products                                     | Easy       |
@@ -57,7 +57,7 @@
 |   O    | 66   | [Link](https://leetcode.com/problems/plus-one)                                                            | Plus One                                                            | Easy       |
 |   O    | 67   | [Link](https://leetcode.com/problems/add-binary)                                                          | Add Binary                                                          | Easy       |
 |   O    | 69   | [Link](https://leetcode.com/problems/sqrtx)                                                               | Sqrt(x)                                                             | Easy       |
-|        | 84   | [Link](https://leetcode.com/problems/largest-rectangle-in-histogram)                                      | Largest Rectangle in Histogram                                      | Hard       |
+|   O    | 84   | [Link](https://leetcode.com/problems/largest-rectangle-in-histogram)                                      | Largest Rectangle in Histogram                                      | Hard       |
 |        | 118  | [Link](https://leetcode.com/problems/pascals-triangle)                                                    | Pascal's Triangle                                                   | Easy       |
 |   O    | 121  | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)                                     | Best Time to Buy and Sell Stock                                     | Easy       |
 |   O    | 125  | [Link](https://leetcode.com/problems/valid-palindrome)                                                    | Valid Palindrome                                                    | Easy       |
@@ -69,8 +69,8 @@
 |        | 2667 | [Link](https://leetcode.com/problems/create-hello-world-function)                                         | Create Hello World Function                                         | Easy       |
 |   O    | 253  | [Link](https://leetcode.com/problems/meeting-rooms-ii)                                                    | Meeting Rooms II                                                    | Medium     |
 |   O    | 322  | [Link](https://leetcode.com/problems/coin-change)                                                         | Coin Change                                                         | Medium     |
-|        | 2235 | [Link](https://leetcode.com/problems/add-two-integers)                                                    | Add Two Integers                                                    | Easy       |
-|        | 354  | [Link](https://leetcode.com/problems/russian-doll-envelopes)                                              | Russian Doll Envelopes                                              | Hard       |
+|   O    | 2235 | [Link](https://leetcode.com/problems/add-two-integers)                                                    | Add Two Integers                                                    | Easy       |
+|   O    | 354  | [Link](https://leetcode.com/problems/russian-doll-envelopes)                                              | Russian Doll Envelopes                                              | Hard       |
 |   O    | 1768 | [Link](https://leetcode.com/problems/merge-strings-alternately)                                           | Merge Strings Alternately                                           | Easy       |
 |   O    | 380  | [Link](https://leetcode.com/problems/insert-delete-getrandom-o1)                                          | Insert Delete GetRandom O(1)                                        | Medium     |
 |   O    | 410  | [Link](https://leetcode.com/problems/split-array-largest-sum)                                             | Split Array Largest Sum                                             | Hard       |
@@ -78,12 +78,12 @@
 |   O    | 10   | [Link](https://leetcode.com/problems/regular-expression-matching)                                         | Regular Expression Matching                                         | Hard       |
 |   O    | 23   | [Link](https://leetcode.com/problems/merge-k-sorted-lists)                                                | Merge k Sorted Lists                                                | Hard       |
 |        | 162  | [Link](https://leetcode.com/problems/find-peak-element)                                                   | Find Peak Element                                                   | Medium     |
-|        | 231  | [Link](https://leetcode.com/problems/power-of-two)                                                        | Power of Two                                                        | Easy       |
+|   O    | 231  | [Link](https://leetcode.com/problems/power-of-two)                                                        | Power of Two                                                        | Easy       |
 |   O    | 21   | [Link](https://leetcode.com/problems/merge-two-sorted-lists)                                              | Merge Two Sorted Lists                                              | Easy       |
 |   O    | 215  | [Link](https://leetcode.com/problems/kth-largest-element-in-an-array)                                     | Kth Largest Element in an Array                                     | Medium     |
 |   O    | 994  | [Link](https://leetcode.com/problems/rotting-oranges)                                                     | Rotting Oranges                                                     | Medium     |
 |   O    | 238  | [Link](https://leetcode.com/problems/product-of-array-except-self)                                        | Product of Array Except Self                                        | Medium     |
-|        | 876  | [Link](https://leetcode.com/problems/middle-of-the-linked-list)                                           | Middle of the Linked List                                           | Easy       |
+|   O    | 876  | [Link](https://leetcode.com/problems/middle-of-the-linked-list)                                           | Middle of the Linked List                                           | Easy       |
 |   O    | 19   | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list)                                    | Remove Nth Node From End of List                                    | Medium     |
 |        | 73   | [Link](https://leetcode.com/problems/set-matrix-zeroes)                                                   | Set Matrix Zeroes                                                   | Medium     |
 |   O    | 72   | [Link](https://leetcode.com/problems/edit-distance)                                                       | Edit Distance                                                       | Medium     |
@@ -101,26 +101,26 @@
 |   O    | 347  | [Link](https://leetcode.com/problems/top-k-frequent-elements)                                             | Top K Frequent Elements                                             | Medium     |
 |        | 148  | [Link](https://leetcode.com/problems/sort-list)                                                           | Sort List                                                           | Medium     |
 |   O    | 102  | [Link](https://leetcode.com/problems/binary-tree-level-order-traversal)                                   | Binary Tree Level Order Traversal                                   | Medium     |
-|        | 977  | [Link](https://leetcode.com/problems/squares-of-a-sorted-array)                                           | Squares of a Sorted Array                                           | Easy       |
+|   O    | 977  | [Link](https://leetcode.com/problems/squares-of-a-sorted-array)                                           | Squares of a Sorted Array                                           | Easy       |
 |   O    | 236  | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                             | Lowest Common Ancestor of a Binary Tree                             | Medium     |
 |   O    | 167  | [Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)                                    | Two Sum II - Input Array Is Sorted                                  | Medium     |
 |        | 44   | [Link](https://leetcode.com/problems/wildcard-matching)                                                   | Wildcard Matching                                                   | Hard       |
 |        | 58   | [Link](https://leetcode.com/problems/length-of-last-word)                                                 | Length of Last Word                                                 | Easy       |
 |        | 131  | [Link](https://leetcode.com/problems/palindrome-partitioning)                                             | Palindrome Partitioning                                             | Medium     |
 |   O    | 2402 | [Link](https://leetcode.com/problems/meeting-rooms-iii)                                                   | Meeting Rooms III                                                   | Hard       |
-|        | 485  | [Link](https://leetcode.com/problems/max-consecutive-ones)                                                | Max Consecutive Ones                                                | Easy       |
+|   O    | 485  | [Link](https://leetcode.com/problems/max-consecutive-ones)                                                | Max Consecutive Ones                                                | Easy       |
 |        | 402  | [Link](https://leetcode.com/problems/remove-k-digits)                                                     | Remove K Digits                                                     | Medium     |
 |   O    | 279  | [Link](https://leetcode.com/problems/perfect-squares)                                                     | Perfect Squares                                                     | Medium     |
 |   O    | 78   | [Link](https://leetcode.com/problems/subsets)                                                             | Subsets                                                             | Medium     |
-|        | 509  | [Link](https://leetcode.com/problems/fibonacci-number)                                                    | Fibonacci Number                                                    | Easy       |
+|   O    | 509  | [Link](https://leetcode.com/problems/fibonacci-number)                                                    | Fibonacci Number                                                    | Easy       |
 |        | 135  | [Link](https://leetcode.com/problems/candy)                                                               | Candy                                                               | Hard       |
-|        | 349  | [Link](https://leetcode.com/problems/intersection-of-two-arrays)                                          | Intersection of Two Arrays                                          | Easy       |
+|   O    | 349  | [Link](https://leetcode.com/problems/intersection-of-two-arrays)                                          | Intersection of Two Arrays                                          | Easy       |
 |        | 142  | [Link](https://leetcode.com/problems/linked-list-cycle-ii)                                                | Linked List Cycle II                                                | Medium     |
 |   O    | 100  | [Link](https://leetcode.com/problems/same-tree)                                                           | Same Tree                                                           | Easy       |
 |   O    | 912  | [Link](https://leetcode.com/problems/sort-an-array)                                                       | Sort an Array                                                       | Medium     |
 |        | 197  | [Link](https://leetcode.com/problems/rising-temperature)                                                  | Rising Temperature                                                  | Easy       |
-|        | 448  | [Link](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array)                            | Find All Numbers Disappeared in an Array                            | Easy       |
-|        | 16   | [Link](https://leetcode.com/problems/3sum-closest)                                                        | 3Sum Closest                                                        | Medium     |
+|   O    | 448  | [Link](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array)                            | Find All Numbers Disappeared in an Array                            | Easy       |
+|   O    | 16   | [Link](https://leetcode.com/problems/3sum-closest)                                                        | 3Sum Closest                                                        | Medium     |
 |   O    | 74   | [Link](https://leetcode.com/problems/search-a-2d-matrix)                                                  | Search a 2D Matrix                                                  | Medium     |
 |        | 103  | [Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal)                            | Binary Tree Zigzag Level Order Traversal                            | Medium     |
 |   O    | 43   | [Link](https://leetcode.com/problems/multiply-strings)                                                    | Multiply Strings                                                    | Medium     |
@@ -137,11 +137,11 @@
 |        | 12   | [Link](https://leetcode.com/problems/integer-to-roman)                                                    | Integer to Roman                                                    | Medium     |
 |   O    | 57   | [Link](https://leetcode.com/problems/insert-interval)                                                     | Insert Interval                                                     | Medium     |
 |        | 1752 | [Link](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated)                                | Check if Array Is Sorted and Rotated                                | Easy       |
-|        | 1480 | [Link](https://leetcode.com/problems/running-sum-of-1d-array)                                             | Running Sum of 1d Array                                             | Easy       |
+|   O    | 1480 | [Link](https://leetcode.com/problems/running-sum-of-1d-array)                                             | Running Sum of 1d Array                                             | Easy       |
 |   O    | 518  | [Link](https://leetcode.com/problems/coin-change-ii)                                                      | Coin Change II                                                      | Medium     |
 |        | 577  | [Link](https://leetcode.com/problems/employee-bonus)                                                      | Employee Bonus                                                      | Easy       |
 |        | 414  | [Link](https://leetcode.com/problems/third-maximum-number)                                                | Third Maximum Number                                                | Easy       |
-|        | 83   | [Link](https://leetcode.com/problems/remove-duplicates-from-sorted-list)                                  | Remove Duplicates from Sorted List                                  | Easy       |
+|   O    | 83   | [Link](https://leetcode.com/problems/remove-duplicates-from-sorted-list)                                  | Remove Duplicates from Sorted List                                  | Easy       |
 |        | 345  | [Link](https://leetcode.com/problems/reverse-vowels-of-a-string)                                          | Reverse Vowels of a String                                          | Easy       |
 |        | 214  | [Link](https://leetcode.com/problems/shortest-palindrome)                                                 | Shortest Palindrome                                                 | Hard       |
 |        | 80   | [Link](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)                              | Remove Duplicates from Sorted Array II                              | Medium     |
@@ -153,10 +153,10 @@
 |        | 595  | [Link](https://leetcode.com/problems/big-countries)                                                       | Big Countries                                                       | Easy       |
 |   O    | 344  | [Link](https://leetcode.com/problems/reverse-string)                                                      | Reverse String                                                      | Easy       |
 |   O    | 45   | [Link](https://leetcode.com/problems/jump-game-ii)                                                        | Jump Game II                                                        | Medium     |
-|        | 1929 | [Link](https://leetcode.com/problems/concatenation-of-array)                                              | Concatenation of Array                                              | Easy       |
+|   O    | 1929 | [Link](https://leetcode.com/problems/concatenation-of-array)                                              | Concatenation of Array                                              | Easy       |
 |        | 383  | [Link](https://leetcode.com/problems/ransom-note)                                                         | Ransom Note                                                         | Easy       |
 |        | 1683 | [Link](https://leetcode.com/problems/invalid-tweets)                                                      | Invalid Tweets                                                      | Easy       |
-|        | 904  | [Link](https://leetcode.com/problems/fruit-into-baskets)                                                  | Fruit Into Baskets                                                  | Medium     |
+|   O    | 904  | [Link](https://leetcode.com/problems/fruit-into-baskets)                                                  | Fruit Into Baskets                                                  | Medium     |
 |        | 127  | [Link](https://leetcode.com/problems/word-ladder)                                                         | Word Ladder                                                         | Hard       |
 |        | 228  | [Link](https://leetcode.com/problems/summary-ranges)                                                      | Summary Ranges                                                      | Easy       |
 |   O    | 210  | [Link](https://leetcode.com/problems/course-schedule-ii)                                                  | Course Schedule II                                                  | Medium     |
@@ -199,7 +199,7 @@
 |        | 2188 | [Link](https://leetcode.com/problems/minimum-time-to-finish-the-race)                                     | Minimum Time to Finish the Race                                     | Hard       |
 |        | 974  | [Link](https://leetcode.com/problems/subarray-sums-divisible-by-k)                                        | Subarray Sums Divisible by K                                        | Medium     |
 |   O    | 1008 | [Link](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal)                | Construct Binary Search Tree from Preorder Traversal                | Medium     |
-|        | 232  | [Link](https://leetcode.com/problems/implement-queue-using-stacks)                                        | Implement Queue using Stacks                                        | Easy       |
+|   O    | 232  | [Link](https://leetcode.com/problems/implement-queue-using-stacks)                                        | Implement Queue using Stacks                                        | Easy       |
 |   O    | 743  | [Link](https://leetcode.com/problems/network-delay-time)                                                  | Network Delay Time                                                  | Medium     |
 |   O    | 46   | [Link](https://leetcode.com/problems/permutations)                                                        | Permutations                                                        | Medium     |
 |   O    | 721  | [Link](https://leetcode.com/problems/accounts-merge)                                                      | Accounts Merge                                                      | Medium     |
@@ -209,7 +209,7 @@
 |        | 278  | [Link](https://leetcode.com/problems/first-bad-version)                                                   | First Bad Version                                                   | Easy       |
 |        | 1044 | [Link](https://leetcode.com/problems/longest-duplicate-substring)                                         | Longest Duplicate Substring                                         | Hard       |
 |        | 787  | [Link](https://leetcode.com/problems/cheapest-flights-within-k-stops)                                     | Cheapest Flights Within K Stops                                     | Medium     |
-|        | 168  | [Link](https://leetcode.com/problems/excel-sheet-column-title)                                            | Excel Sheet Column Title                                            | Easy       |
+|   O    | 168  | [Link](https://leetcode.com/problems/excel-sheet-column-title)                                            | Excel Sheet Column Title                                            | Easy       |
 |        | 1949 | [Link](https://leetcode.com/problems/strong-friendship)                                                   | Strong Friendship                                                   | Medium     |
 |        | 2141 | [Link](https://leetcode.com/problems/maximum-running-time-of-n-computers)                                 | Maximum Running Time of N Computers                                 | Hard       |
 |        | 3623 | [Link](https://leetcode.com/problems/count-number-of-trapezoids-i)                                        | Count Number of Trapezoids I                                        | Medium     |
@@ -232,8 +232,8 @@
 |        | 3531 | [Link](https://leetcode.com/problems/count-covered-buildings)                                             | Count Covered Buildings                                             | Medium     |
 |        | 2619 | [Link](https://leetcode.com/problems/array-prototype-last)                                                | Array Prototype Last                                                | Easy       |
 |        | 438  | [Link](https://leetcode.com/problems/find-all-anagrams-in-a-string)                                       | Find All Anagrams in a String                                       | Medium     |
-|        | 1004 | [Link](https://leetcode.com/problems/max-consecutive-ones-iii)                                            | Max Consecutive Ones III                                            | Medium     |
-|        | 32   | [Link](https://leetcode.com/problems/longest-valid-parentheses)                                           | Longest Valid Parentheses                                           | Hard       |
+|   O    | 1004 | [Link](https://leetcode.com/problems/max-consecutive-ones-iii)                                            | Max Consecutive Ones III                                            | Medium     |
+|   O    | 32   | [Link](https://leetcode.com/problems/longest-valid-parentheses)                                           | Longest Valid Parentheses                                           | Hard       |
 |        | 362  | [Link](https://leetcode.com/problems/design-hit-counter)                                                  | Design Hit Counter                                                  | Medium     |
 |   O    | 139  | [Link](https://leetcode.com/problems/word-break)                                                          | Word Break                                                          | Medium     |
 |        | 811  | [Link](https://leetcode.com/problems/subdomain-visit-count)                                               | Subdomain Visit Count                                               | Medium     |
@@ -290,7 +290,7 @@
 |        | 395  | [Link](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters)              | Longest Substring with At Least K Repeating Characters              | Medium     |
 |        | 756  | [Link](https://leetcode.com/problems/pyramid-transition-matrix)                                           | Pyramid Transition Matrix                                           | Medium     |
 |   O    | 150  | [Link](https://leetcode.com/problems/evaluate-reverse-polish-notation)                                    | Evaluate Reverse Polish Notation                                    | Medium     |
-|        | 224  | [Link](https://leetcode.com/problems/basic-calculator)                                                    | Basic Calculator                                                    | Hard       |
+|   O    | 224  | [Link](https://leetcode.com/problems/basic-calculator)                                                    | Basic Calculator                                                    | Hard       |
 |        | 480  | [Link](https://leetcode.com/problems/sliding-window-median)                                               | Sliding Window Median                                               | Hard       |
 |        | 2423 | [Link](https://leetcode.com/problems/remove-letter-to-equalize-frequency)                                 | Remove Letter To Equalize Frequency                                 | Easy       |
 |        | 840  | [Link](https://leetcode.com/problems/magic-squares-in-grid)                                               | Magic Squares In Grid                                               | Medium     |
@@ -300,5 +300,5 @@
 |        | 992  | [Link](https://leetcode.com/problems/subarrays-with-k-different-integers)                                 | Subarrays with K Different Integers                                 | Hard       |
 |        | 496  | [Link](https://leetcode.com/problems/next-greater-element-i)                                              | Next Greater Element I                                              | Easy       |
 |        | 2149 | [Link](https://leetcode.com/problems/rearrange-array-elements-by-sign)                                    | Rearrange Array Elements by Sign                                    | Medium     |
-|        | 844  | [Link](https://leetcode.com/problems/backspace-string-compare)                                            | Backspace String Compare                                            | Easy       |
+|   O    | 844  | [Link](https://leetcode.com/problems/backspace-string-compare)                                            | Backspace String Compare                                            | Easy       |
 |        | 1411 | [Link](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid)                                    | Number of Ways to Paint N × 3 Grid                                  | Hard       |
