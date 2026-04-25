@@ -1,4 +1,25 @@
 """
+envelopes = [[5,4],[6,4],[8,1],[6,7],[2,3],[7,8],[7,5],[8,6],[9,6]]
+envelopes = [[2,3],[5,4],[6,7],[6,4],[7,8],[7,5],[8,6],[8,1],[9,6]]
+
+[3,4,7,4,8,5,6,1,6]
+
+[3]
+[3,4]
+[3,4,7]
+[3,4,7]
+[3,4,7,8]
+[3,4,5,8]
+[3,4,5,6]
+
+I just talked with Gemini and there is a limitation to this idea. The elements in the array are not always necessarily a valid sequence. For example if you have [3, 4, 5, 8]
+where both 5 and 8 have a width of 7, it is not a possible case in reality. The reason we use this approach anyway is to prepare for future cases where an envelope with a
+larger width might have a smaller height than 8. By doing this, we prevent those cases from being discarded due to the height constraint when they actually appear.
+
+Therefore if the problem asks for the actual sequence of the longest envelopes you would unfortunately have to check if the array is valid every time.
+"""
+
+"""
 However writing the O(n^2) DP code as shown below resulted in a Time Limit Exceeded error. After talking more with Gemini I learned that LIS problems can be solved in
 O(n log n) by using Binary Search.
 
