@@ -1,3 +1,12 @@
+"""
+This problem has a logical structure that is almost perfectly identical to "402. Remove K Digits".
+
+Just as you can compare numbers using `int(stack[-1]) < int(num_char)` remember that characters can also be compared like `"a" < "c"`.
+
+Also in that problem `count < k` was used as one of the conditions for the pop operation. In this problem you must remember that `counts[stack[-1]] > 0` is used as one of the conditions for the pop decision.
+"""
+
+
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
         counts = {}
