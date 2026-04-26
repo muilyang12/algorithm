@@ -1,3 +1,15 @@
+"""
+[7,2,10,5,12]
+
+stack
+[(7,1)]
+[(7,1),(2,1)]
+[(10,3)]
+[(10,3),(5,1)]
+[(12,5)]
+"""
+
+
 # Time Complexity: O(n) (n: number of prices, total number of calls)
 class StockSpanner:
     def __init__(self):
@@ -13,6 +25,14 @@ class StockSpanner:
         self.prices.append((price, span))
 
         return span
+
+
+"""
+[7,2,10,5,12]
+ !
+
+stack = [(7, 1), (2, 1), (10, 3), (5, 1)]
+"""
 
 
 # Time Complexity: O(n^2) (n: number of prices, total number of calls)
